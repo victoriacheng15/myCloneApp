@@ -1,15 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function TopNav() {
+	const ICON_SIZE = 30;
 	return (
 		<View style={styles.topNav}>
-			<AntDesign name="left" size={30} color="black" />
+			<TouchableOpacity onPress={() => alert("Back")}>
+				<AntDesign name="left" size={ICON_SIZE} color="black" />
+			</TouchableOpacity>
 			<View style={styles.topNavText}>
 				<Text style={styles.heading}>Group Profile</Text>
 				<Text style={styles.subheading}>ootd_everyday</Text>
 			</View>
-			<AntDesign name="plussquareo" size={24} color="black" />
+			<TouchableOpacity onPress={() => alert("Add")}>
+				<AntDesign name="plussquareo" size={ICON_SIZE} color="black" />
+			</TouchableOpacity>
 		</View>
 	);
 }
@@ -28,14 +33,14 @@ const styles = StyleSheet.create({
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
-    gap:4,
+		gap: 4,
 	},
-  heading: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  subheading: {
-    fontSize: 16,
-    color: "gray",
-  }
+	heading: {
+		fontSize: 20,
+		fontWeight: "bold",
+	},
+	subheading: {
+		fontSize: 16,
+		color: "gray",
+	},
 });
