@@ -28,6 +28,5 @@ const styles = StyleSheet.create({
 	imgViewContainer: {
 		flex: 1, // Let the gallery take up all available space
 		width: "100%", // Ensure it stretches across the screen
-		// backgroundColor: "#000000", // Add this to differentiate ImgView's area
 	},
 });
